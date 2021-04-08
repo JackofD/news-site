@@ -6,7 +6,7 @@ const Header = (props) => {
 
   return (
     <header className="header">
-      <div className="search-wrapper"><input className="search-field" placeholder="Search" type="search" value={searchValue} onChange={(evt) => change(evt.value)} /></div>
+      <div className="search-wrapper"><input className="search-field" placeholder="Search" type="search" value={searchValue} onChange={(evt) => {change(evt.target.value)}} /></div>
       <div className="btn-dark" onClick={() => handleClick()}>Search</div>
     </header>
   );
