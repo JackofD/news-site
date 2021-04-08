@@ -7,8 +7,6 @@ import Header from './components/Header';
 import NewsFeed from './components/NewsFeed';
 import SideBar from './components/SideBar';
 
-console.log(process.env.REACT_APP_NEWS_KEY);
-
 function App() {
 
   const [articles, setArticles] = useState([]);
@@ -24,10 +22,6 @@ function App() {
   useEffect( () => {
     fetchHeadlines().then(list => setArticles(list))
   }, []);
-
-  useEffect(() => {
-    // console.log('articles change', articles);
-  }, [articles]);
 
   return (
     <div className="App app-layout">
