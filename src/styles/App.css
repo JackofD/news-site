@@ -1,0 +1,129 @@
+
+.App {
+  font-family: 'El Messiri', sans-serif;
+}
+
+.app-layout {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main sidebar";
+
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: 1fr 250px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.news-feed {
+  grid-area: main;
+  padding-right: 2rem;
+  border-right: 1px solid #cdcdcd;
+  min-height: calc(100vh - 200px);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  margin-left: 2rem;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  width: 45%;
+  margin-bottom: 1rem;
+  border: 1px solid #cdcdcd;
+  text-align: center;
+}
+.image-container {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.article-card img, .article-card .no-image-placeholder {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-card.lg img {
+  height: auto;
+}
+.article-card .no-image-placeholder {
+  height: 250px;
+  background-color: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sm .article-info {
+  padding: 1rem;
+}
+.article-card .publisher-info {
+  display: flex;
+  font-family: 'Martel Sans', sans-serif;
+  color: #dedede;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.lg .publisher-info {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sm .publisher-info {
+  flex-direction: column;
+}
+.article-card p {
+  font-family: 'Martel Sans', sans-serif;
+}
+
+/* Styles specific to the first card */
+.article-card:first-of-type {
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #cdcdcd;
+  text-align: left;
+}
+
+.btn-dark {
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Martel Sans', sans-serif;
+  border: 1px solid;
+  display: inline-block;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.read-more-btn {
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Martel Sans', sans-serif;
+  border: 1px solid;
+  display: inline-block;
+  cursor: pointer;
+}
+.lg .read-more-btn {
+  color: white;
+  background-color: black;
+}
+.sm .read-more-btn {
+  color: initial;
+  margin-top: 1rem;
+  border: 2px solid;
+}
